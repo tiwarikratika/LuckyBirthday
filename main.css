@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root{
+    --primary-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+}
+
+body{
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+    font-family: 'Josefin Sans', sans-serif;
+ 
+ 
+  
+}
+.res{
+    margin:auto auto;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    font-size: 28px;
+    text-align: center;
+}
+.img {
+    width: 60%;
+    margin: 0 auto;
+  }
+html{
+    scroll-behavior: smooth;
+}
+.sec-1 {
+
+    margin: auto ;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    width: 90%;
+    
+    --tw-bg-opacity: 1;
+    background-color: var(--primary-color);
+  
+}
+a{
+    text-decoration: none;
+   
+}
+
+#sec-2{
+   
+    background-size: cover;
+    background-position: cover;
+
+    margin: auto; 
+    width: 90%;
+    --tw-bg-opacity: 0.9;
+    background-color: var(--primary-color);
+
+}
+
+.sec2-heading{
+    font-size: 28px;
+    font-weight: 100;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    
+}
+
+.container{
+    text-align: center;
+    border:1px solid black;
+    box-shadow: 0px 0px 8px 2px;
+    padding-bottom: 2rem;
+    padding-top:2rem ;
+    
+
+    
+}
+
+.sec-3{
+    margin: auto;
+   padding-top:5%;
+   margin-top: 5%;
+    width: 90%;
+    font-size: 22px;
+   
+}
+
+#lucky{
+    padding-top:3%;
+    margin-top: 3%;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 200;
+  
+}
+.subtitle{
+    font-size: 24px;;
+}
+
+.birth-date, .lucky-num{
+    font-size: 24px;
+    padding-top: 0.7rem;
+    padding-bottom: 1rem;
+}
+.date,.number{
+    width: 200px;
+    height: 40px;
+    padding:1rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.check{
+    width: 120px;
+    height: 35px;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: black;
+    color: white;
+    
+}
+
+.check:hover{
+    background-color: rgb(235, 133, 133);
+}
