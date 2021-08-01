@@ -4,6 +4,7 @@ var btn = document.querySelector(".check");
 var result = document.querySelector(".res");
 var luckyimage = document.querySelector('.img1'); 
 var unluckyimage = document.querySelector('.img2'); 
+msg = document.querySelector(".message");
 var lucky=0;
 
 luckyimage.style.display = "none";
@@ -12,25 +13,35 @@ unluckyimage.style.display = "none";
 
 btn.addEventListener("click",checkIfLucky);
 
+
+
 function checkIfLucky(){
     
     
     const dateinput = birthday.value;
+    const numberinput = number.value;
+    if(!dateinput || !numberinput )
+    {
+        msg.innerText = "Enter the details properly";
+
+    }
+    else{
     const sum = calculatesum(dateinput);
     console.log(sum);
 
-    const numberinput = number.value;
+   
     if(sum%numberinput==0)
     {
         lucky=1;
-        result.innerText = "You are lucky !!";
+        
         display();
-       
+        result.innerText = "You are lucky !!";
     }
     else{
         display();
         result.innerText = "Well!! sorry, not solucky";
     }
+}
 
 }
 
