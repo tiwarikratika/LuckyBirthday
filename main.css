@@ -12,6 +12,14 @@ body{
  
   
 }
+.img1, .img2{
+    
+
+    width:90%;
+    height:30%;
+    padding-left:5%;
+
+}
 .res{
     margin:auto auto;
     padding-left: 5%;

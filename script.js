@@ -2,58 +2,62 @@ var birthday = document.querySelector(".date");
 var number = document.querySelector(".number");
 var btn = document.querySelector(".check");
 var result = document.querySelector(".res");
-var img1 = document.getElementById('lucky'); 
+var luckyimage = document.querySelector('.img1'); 
+var unluckyimage = document.querySelector('.img2'); 
 var lucky=0;
 
+luckyimage.style.display = "none";
+unluckyimage.style.display = "none";
+
+
+btn.addEventListener("click",checkIfLucky);
+
 function checkIfLucky(){
-    var sum=0;
-    var dateinput = birthday.value;
-    var numberinput = number.value;
-    console.log(dateinput);
-    console.log(numberinput);
+    
+    
+    const dateinput = birthday.value;
+    const sum = calculatesum(dateinput);
+    console.log(sum);
 
-    var last = Math.trunc(dateinput%10);
-    var first = Math.trunc(dateinput/10);
-
-    sum = first+last;
-
+    const numberinput = number.value;
     if(sum%numberinput==0)
     {
         lucky=1;
         result.innerText = "You are lucky !!";
-        GFG_Fun();
+        display();
        
     }
     else{
-        GFG_Fun();
+        display();
         result.innerText = "Well!! sorry, not solucky";
     }
 
 }
 
-var styles = {
-    "width":"90%",
-    "height":"30%",
-    "padding-left":"5%"
-};
+function calculatesum(bdate)
+{
+   bdate = bdate.replaceAll("-","");
+   var sum=0;
+   for(let i=0;i<bdate.length;i++)
+   {
+       sum = sum+ Number(bdate.charAt(i));
+   }
+  return sum;
 
-function GFG_Fun() {
+
+}
+
+
+function display() {
     if(lucky===1)
     {
-    var img = new Image();
-    img.src = 'lucky.png';
-    var obj = document.getElementById('body').appendChild(img);
-    Object.assign(obj.style,styles);
+    luckyimage.style.display = "block";
     }
    
     else{
-        var img = new Image();
-        img.src = 'unlucky.png';
-        var obj = document.getElementById('body').appendChild(img);
-    Object.assign(obj.style,styles);
+        unluckyimage.style.display = "block";
     }
     
     
 } 
 
-btn.addEventListener("click",checkIfLucky);
